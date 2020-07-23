@@ -24,12 +24,14 @@ using tmss.Authorization.Users.Importing.Dto;
 using tmss.Authorization.Users.Profile.Dto;
 using tmss.Chat;
 using tmss.Chat.Dto;
+using tmss.Customers;
 using tmss.DynamicEntityParameters.Dto;
 using tmss.Editions;
 using tmss.Editions.Dto;
 using tmss.Friendships;
 using tmss.Friendships.Cache;
 using tmss.Friendships.Dto;
+using tmss.ICustomerServices.Dto;
 using tmss.Localization.Dto;
 using tmss.MultiTenancy;
 using tmss.MultiTenancy.Dto;
@@ -158,6 +160,9 @@ namespace tmss
             configuration.CreateMap<EntityDynamicParameterValue, EntityDynamicParameterValueDto>().ReverseMap();
             //User Delegations
             configuration.CreateMap<CreateUserDelegationDto, UserDelegation>();
+
+            //Customer mapper
+            configuration.CreateMap<Customer, CustomerListDto>();
 
 
             /* ADD YOUR OWN CUSTOM AUTOMAPPER MAPPINGS HERE */

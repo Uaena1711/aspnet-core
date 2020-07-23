@@ -6,6 +6,7 @@ using tmss.Authorization.Delegation;
 using tmss.Authorization.Roles;
 using tmss.Authorization.Users;
 using tmss.Chat;
+using tmss.Customers;
 using tmss.Editions;
 using tmss.Friendships;
 using tmss.MultiTenancy;
@@ -36,6 +37,8 @@ namespace tmss.EntityFrameworkCore
         public virtual DbSet<SubscriptionPaymentExtensionData> SubscriptionPaymentExtensionDatas { get; set; }
 
         public virtual DbSet<UserDelegation> UserDelegations { get; set; }
+
+        public virtual DbSet<Customer> Customers { set; get; }
 
         public tmssDbContext(DbContextOptions<tmssDbContext> options)
             : base(options)
